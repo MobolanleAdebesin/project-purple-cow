@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: ppc-container
+    image: click-app
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
