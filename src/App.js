@@ -12,8 +12,19 @@ function App() {
   const info = encodeURI(`${BASE_URL}/info/bolaadebesin/${API_KEY}`)
   const hitUrl = encodeURI(`${BASE_URL}/hit/bolaadebesin/${API_KEY}`)
   const resetUrl = encodeURI(`${BASE_URL}/set/bolaadebesin/${API_KEY}?value=0`)
+  const style = {
+    height: `${30 * count || 30}px`,
+    width: `${30 * count || 30}px`,
+    backgroundColor: "#5c3977",
+    borderRadius: "50%",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    color: "white",
+    margin: "1rem"
+  }
 
-  // Mount Componentl with initial count/hit value
+  // Mount Component with initial count/hit value
   useEffect(() => {
 
     fetch(info)
@@ -50,7 +61,9 @@ function App() {
 
   return (
     <div className="App">
-      <div>{count}</div>
+      <div className="App-Count-Container">
+        <div className="shadow" style={style}>{count}</div>
+      </div>
       <HitButton type="hit" onClick={(e) => onClick(e)}></HitButton>
       <HitButton type="reset" onClick={(e) => onClick(e)}></HitButton>
 

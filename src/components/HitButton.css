@@ -1,0 +1,24 @@
+.HitButton-Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+.HitButton-Button {
+    color: white;
+    background-color: #ee5340;
+
+    outline: none;
+    border: transparent;
+    height: 2rem;
+    width: 5rem;
+    margin: 1rem;
+
+}
+
+.HitButton-Button:hover {
+    background-color: #b03c2d;
+}
